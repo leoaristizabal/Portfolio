@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>Leo Aristizabal</h1>
+    
         <nav>
-          <ul>
+          <ul class="navbar">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="about.html">Acerca de</a></li>
             <li><a href="projects.html">Proyectos</a></li>
@@ -21,29 +21,34 @@
         </nav>
       </header>
 <main>
-<h2>Contacto</h2>
-    <form>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
+  <div class="login-box">
+    <img src="L.svg" alt="logo">
 
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required>
+    <h2>Login</h2>
+<form>
 
-    <label for="telefono">Teléfono:</label>
-    <input type="tel" id="telefono" name="telefono" required>
+    <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Username</label>
+    </div>
+    
+    <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+    </div>
 
-    <label for="instagram">Instagram:</label>
-    <input type="text" id="instagram" name="instagram" required>
+    <div class="btn-form">
+        <button type="submit">Ingresar</button>
+    
+        <div id="register">
+            No tienes cuenta?
+            <a href="#">Registrate</a>
+        </div>
 
-    <label for="github">GitHub:</label>
-    <input type="text" id="github" name="github" required>
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
-
-    <input type="submit" value="Enviar">
-    </form>
-      </main>
+    </div>
+</form>
+</div>
+</main>
     
 </body>
 </html>

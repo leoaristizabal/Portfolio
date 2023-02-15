@@ -9,13 +9,222 @@
 
 :root {
     --white: #fafafb;
-    --purple: #9a67ea;
-    --blue-light:#04d4c3;
+    --gris: #242026;
+    --blue-light:#E1C097;
     --blue-dark:#2a73c2;
-    --green:#2c7b90;
+    --green:#52bf4f;
+    --green-dark: #162b18;
+    --dark: #252525;
 }
 
 body {
-    background: linear-gradient(to bottom,var(--purple),var(--blue-light));
+    background: linear-gradient(to bottom,var(--green-dark),var(--green));
     height: 100vh;
+}
+
+
+
+.navbar{
+    display: flex;
+    gap: 72px;
+    box-shadow: 0 3px 0 #333;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.navbar li a {
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+ul:hover li a{
+    color: #52bf4f;
+}
+
+ul:hover li a:not(:hover) {
+    color: var(--white);
+    opacity: 0.3;
+    filter: blur(1px);
+}
+/*Footer y botones de rrss*/
+
+.pie-pagina{
+    width: 100%;
+    background-color:var(--gris);
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /*que se repita 3 veces las columnas y ocupen todo el ancho con 1fr?*/
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color:var(--green);
+    text-align:center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: var(--green-dark);
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+/*hacerlo responsive*/
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1,1fr); /*solo una columna y ocupen todo el ancho con 1fr?*/
+    grid-gap: 30px;
+    padding: 35px 0px;
+    }
+}
+
+/*Login de usuario*/
+.login-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: var(--dark);
+    box-shadow: 0 15px 25px #52bf4f;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.login-box img{
+    position: relative;
+    width: 100%;
+    
+}
+
+.login-box h2 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.login-box .user-box input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fafafb;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+.login-box.user-box label{
+    position: relative;
+    left: 0;
+    top: -60px;
+    padding: 10px 0;
+    font-size: 15px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -85px;
+    left: 0;
+    color: #52bf4f;
+    font-size: 12px;
+}
+
+button{
+    padding: 10px 20px;
+    color: #52bf4f;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    margin: auto;
+    border: 1px solid #52bf4f;
+    background: transparent;
+}
+
+button:hover{
+    background-color: #52bf4f;
+    color: #fff;
+    border-radius:  5px;
+    box-shadow: 0 0 5px #52bf4f, 0 0 25px #52bf4f, 0 0 50px #52bf4f, 0 0 100px #52bf4f;
+}
+
+
+.btn-form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#register{
+    font-size: 14px;
+    text-decoration: none;
+    color: #cbbddb;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#register a{
+    margin: auto;
+    color: #52bf4f;
+    text-decoration: none;
 }
