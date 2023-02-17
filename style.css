@@ -22,8 +22,12 @@ font-family: 'Roboto', 'Nunito', sans-serif;
 body {
     background: linear-gradient(to bottom,var(--blue-light),var(--green));
     height: 100vh;
-}
+ }
 
+ .imglogo{
+    width: 100px;
+    max-height: 10%;
+ }
 .wrapper {
     width: 100%;
     max-width: 1000px;
@@ -35,7 +39,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dark);
+    background-color: var(--green-dark);
     padding: 1rem 1.5rem;
     border-radius: 0.4rem;
   }

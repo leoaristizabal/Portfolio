@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Acerca de Leo Aristizabal</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/647dc82472.js" crossorigin="anonymous"></script>
+  <title>Acerca de Leo Aristizabal</title>
 </head>
+
 <body>
-    <header>
-        
-        <nav>
-          <ul class="navbar">
+
+  <header>
+    <div class="wrapper">
+      <nav>
+        <a href="index.html" class="logo"><img src="L.svg" alt="Logo" class="imglogo"></a>
+        <input type="checkbox" name="" id="toggle">
+        <label for="toggle"><i class="material-icons">menu</i></label>
+        <div class="menu">
+          <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="about.html">Acerca de</a></li>
             <li><a href="projects.html">Proyectos</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contacto</a></li>
           </ul>
-        </nav>
-      </header>
-    <header>
-        <h1>Mi Página de Presentación</h1>
-      </header>
+        </div>
+      </nav>
+    </div>
+  </header>
+    
       <main>
+
         <section>
           <h2>Sobre Mí</h2>
           <p>Breve descripción sobre quién eres, tus habilidades, intereses y lo que te apasiona hacer.</p>
         </section>
+
         <section>
           <h2>Educación y Experiencia</h2>
           <ul>
@@ -35,6 +49,7 @@
             <li>Experiencia laboral previa, habilidades adquiridas, proyectos en los que hayas participado.</li>
           </ul>
         </section>
+
         <section>
           <h2>Contacto</h2>
           <ul>
@@ -43,9 +58,44 @@
             <li>Enlaces a tus redes sociales</li>
           </ul>
         </section>
+
       </main>
-      <footer>
-        <p>Copyright © 2023</p>
-      </footer>
+
+<footer class="pie-pagina">
+
+<div class="grupo-1">
+
+  <div class="box">
+      <figure>
+          <a href="index.html">
+              <img src="L.svg" alt="Logo de empresa">
+          </a>
+      </figure>
+  </div>
+
+  <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, fugit!</P>
+      <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, fugit!</P>
+  </div>
+
+  <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="red-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-github"></a>
+      </div>
+  </div>
+</div>
+
+<div class="grupo-2">
+  <small>&copy; 2023 <b>LeoAristizabal</b> - Todos los Derechos Reservados.</small>
+</div>
+
+</footer>
+
 </body>
+
 </html>
