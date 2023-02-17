@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', 'Nunito', sans-serif;
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto', 'Nunito', sans-serif;
 }
 
 :root {
@@ -18,32 +20,42 @@
 }
 
 body {
-    background: linear-gradient(to bottom,var(--green-dark),var(--green));
+    background: linear-gradient(to bottom,var(--blue-light),var(--green));
     height: 100vh;
 }
 
-
-
-.navbar{
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  nav {
     display: flex;
-    gap: 72px;
-    box-shadow: 0 3px 0 #333;
-}
-
-.navbar li{
-    list-style: none;
-}
-
-.navbar li a {
-    font-size: 26px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark);
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
+  }
+  nav .logo {
     font-weight: 700;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav a {
     text-decoration: none;
-    text-transform: uppercase;
-    color: var(--white);
-    padding: 10px;
-    transition: 0.5s ease;
-}
-
+    color: white;
+  }
+  nav #toggle,
+  nav label {
+    display: none;
+  }
+  
 ul:hover li a{
     color: #52bf4f;
 }
@@ -120,17 +132,8 @@ ul:hover li a:not(:hover) {
     font-size: 15px;
 }
 
-/*hacerlo responsive*/
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-    width: 90%;
-    grid-template-columns: repeat(1,1fr); /*solo una columna y ocupen todo el ancho con 1fr?*/
-    grid-gap: 30px;
-    padding: 35px 0px;
-    }
-}
 
-/*Login de usuario*/
+/*Login de usuario en contact.html*/
 .login-box{
     position: absolute;
     top: 50%;
@@ -228,3 +231,33 @@ button:hover{
     color: #52bf4f;
     text-decoration: none;
 }
+/*hacerlo responsive*/
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1,1fr); /*solo una columna y ocupen todo el ancho con 1fr?*/
+    grid-gap: 30px;
+    padding: 35px 0px;
+    }
+}
+
+@media (max-width: 40.625em) {
+    nav .menu {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+    nav label {
+      display: inline-flex;
+      color: white;
+      cursor: pointer;
+    }
+    nav #toggle:checked ~ .menu {
+      height: 100%;
+    }
+  }
